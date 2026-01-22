@@ -1,0 +1,102 @@
+ @import 'tailwindcss';
+
+ /* 
+body{
+  cursor: url(""), auto;
+} */
+
+ /* 
+ .mirror-x-effect {
+     background-image: url(photo.jpg);
+     background-size: cover;
+     background-position: center;
+ }
+ */
+ @supports (transform: scaleX(-1)) {
+     .mirror-x-effect {
+         position: relative;
+     }
+
+     .mirror-x-effect:before,
+     .mirror-x-effect:after {
+         display: block;
+         content: "";
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         background: inherit;
+     }
+
+     .mirror-x-effect:before {
+         left: 0;
+         right: 50%;
+         transform: scaleX(-1);
+     }
+
+     .mirror-x-effect:after {
+         left: 50%;
+         right: 0;
+     }
+ }
+
+ /* 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar 
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Animations 
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Form styles 
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Card hover effects 
+
+.hover-card {
+    transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+} */

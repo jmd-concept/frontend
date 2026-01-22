@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./*"
+            ],
+            "@/app/*": [
+                "./app/*"
+            ],
+            "@/api/*": [
+                "./api/*"
+            ],
+            "@lib/*": [
+                "app/lib/api/*"
+            ],
+            "@/admin/*": [
+                "admin/*"
+            ],
+            "@/components/*": [
+                "components/*"
+            ],
+            "@/utils/*": [
+                "./utils/*"
+            ],
+            "@/styles/*": [
+                "./styles/*"
+            ],
+            "@public/*": [
+                "./public/*"
+            ]
+        }
+    },
+    "include": [
+        "**/*.js",
+        "postcss.config.mjs"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
